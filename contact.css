@@ -1,0 +1,14 @@
+
+.container {
+    display: flex;
+    justify-content: center
+}
+
+.form {
+    padding: 25px;
+}
+
+.table{
+    margin-top: 70px;
+}
+

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+    <div class = "container-fluid text-center"> 
+    </br>
+        <h1> Users table </h1>
+
+        <table class = "table">
+        <tr>
+            <th>Photo</th>
+            <th>Id</th>
+            <td>Username</td>
+            <td>Email</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr> 
+
+        {% for x in content %}
+        
+        <tr>
+        <td> {{x.photo}} </td>
+        <td> {{x.id}} </td> 
+        <td> {{x.username}} </td> 
+        <td> {{x.email}} </td> 
+        
+
+        <td>
+            <form action = "http://127.0.0.1:5000/update/{{x.id}}" method = "GET">
+                    <button> <i class="fa fa-pen-nib"> </i> </button>
+            </form>
+        </td>
+
+        <td>
+            <form action = "http://127.0.0.1:5000/delete/{{x.id}}" method = "GET">
+                    <button> <i class="fa fa-trash"></i> </button>
+            </form>
+        <td>
+
+        </tr>
+
+        {% endfor %}
+        </table>
+    </div>
+</body>
+
+{% endblock%}

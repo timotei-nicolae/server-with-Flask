@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <head>
+        <title>Register Form</title>
+    </head>
+        
+    
+    <body>  
+        
+    <form action = "http://127.0.0.1:5000/update/{{put.id}}" method = "POST">  
+     
+        <table>
+            <tr>
+                <td>Id:</td>
+                <td>
+                    <input type = "number"  name="id" value = "{{put.id}}"> 
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Username:</td>
+                <td>
+                    <input type = "text"  name="username" value = "{{put.username}}"> 
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type = "text"  name="email" value = "{{put.email}}"> 
+                </td>
+            </tr>
+
+        
+        </table>
+        
+        <button> Done </button>
+
+    </form>
+    </body>
+
+{% endblock%}
+
+    

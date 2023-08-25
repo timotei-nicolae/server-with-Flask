@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>  
+<form class="form" action = "#" method = "POST" >   
+
+
+    <div class = "container-fluid">
+        
+        <div class= "container">
+            <h2 class = "text-center mb-5 shadow-sm p-3"> Contact us </h2>
+        </div>
+
+        <div class = "form"> 
+        <div class="box-form bg-info bg-opacity-10">
+            
+                    <div class = "col ms-1">
+                        <label class = "form-label"> Username: </label>
+                        <input type = "text" class = "form-control" name = "username" placeholder="username">
+                    </div>
+        
+                </br>
+
+                    <div class = "mb-3">
+                        <label class = "form-label"> Email: </label>
+                        <input type = "text" class = "form-control" name = "email" placeholder="name@email.com">
+                    </div>
+                    
+                </br>
+
+                    <div class = "mb-3">
+                        <label class = "form-label"> Message: </label>
+                        <textarea class = "form-control" name = "message" placeholder="Type here..." rows="2"></textarea>
+                    </div>
+                    
+                    <div class="d-grid gap-2 col-5 mx-auto">
+                        <button type="submit" class="input-group-text">Submit</button>
+                    </div>
+        </div>        
+        </div>
+
+    </div>
+
+</form>
+</body>
+
+
+{% endblock %}
